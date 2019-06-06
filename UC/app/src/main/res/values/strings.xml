@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">UC</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_time_table_">TimeTable_Activity</string>
+    <string name="title_activity_email_">Email_Activity</string>
+    <string name="title_activity_campus__map_">Campus_Map_Activity</string>
+    <string name="title_activity_canvas_">Canvas_Activity</string>
+    <string name="title_activity_map_view_">MapView_Activity</string>
+</resources>
