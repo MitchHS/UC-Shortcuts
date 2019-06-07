@@ -14,22 +14,13 @@
         <activity
             android:name=".MapView_Activity"
             android:label="@string/title_activity_map_view_"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
-        <activity
-            android:name=".Canvas_Activity"
-            android:label="@string/title_activity_canvas_"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:theme="@style/AppTheme.NoActionBar"
+            android:screenOrientation="portrait"
+            android:configChanges="orientation|keyboardHidden">>
+        </activity>
         <activity
             android:name=".WebView_Activity"
             android:label="@string/title_activity_campus__map_"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity
-            android:name=".Email_Activity"
-            android:label="@string/title_activity_email_"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity
-            android:name=".TimeTable_Activity"
-            android:label="@string/title_activity_time_table_"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".MainActivity"
