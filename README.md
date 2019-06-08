@@ -7,3 +7,6 @@
 3. UC Allocate
 4. UC Canvas
 5. UC Exam TimeTable
+6. UC Home 
+
+Should be support by most mobile resolutions and a majority of tablets. Work in progress. 
