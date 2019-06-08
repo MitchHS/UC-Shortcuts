@@ -1,6 +1,7 @@
 package com.u3100289.uc;
 
 import android.content.Intent;
+import android.content.pm.ActivityInfo;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
@@ -24,18 +25,21 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_SENSOR);
 
         // Buttons
         Button canButton = (Button) findViewById(R.id.canvasButton);
         Button emailButton = (Button) findViewById(R.id.emailButton);
         Button mapButton = (Button) findViewById(R.id.mapButton);
         Button timeTableButton = (Button) findViewById(R.id.timetableButton);
+        Button examButton = (Button) findViewById(R.id.examButton);
 
         // Add to Arraylist
         buttonList.add(canButton);
         buttonList.add(emailButton);
         buttonList.add(mapButton);
         buttonList.add(timeTableButton);
+        buttonList.add(examButton);
 
 
     }
@@ -81,6 +85,13 @@ public class MainActivity extends AppCompatActivity {
         if(view.getId() == buttonList.get(3).getId())
         {
             intent.putExtra("url", "https://www.canberra.edu.au/myuc-u/enrolments-and-timetables/uc-class-allocation-system");
+            intent.putExtra("title", "Timetable");
+        }
+
+        if(view.getId() == buttonList.get(4).getId())
+        {
+            intent.putExtra("url", "https://www.canberra.edu.au/myuc-u/exams-and-results/exam-timetable");
+            intent.putExtra("title", "Exam Timetable");
         }
         startActivity(intent);
     }

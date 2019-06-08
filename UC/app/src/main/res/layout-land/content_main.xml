@@ -12,8 +12,8 @@
         android:id="@+id/mapButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="50dp"
-        android:layout_marginTop="108dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="64dp"
         android:onClick="toMap"
         android:text="Map"
         app:layout_constraintStart_toStartOf="parent"
@@ -23,18 +23,21 @@
         android:id="@+id/emailButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="108dp"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="64dp"
         android:layout_marginEnd="50dp"
         android:onClick="toWeb"
         android:text="Email"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.011"
+        app:layout_constraintStart_toEndOf="@+id/mapButton"
         app:layout_constraintTop_toBottomOf="@+id/titleUC" />
 
     <Button
         android:id="@+id/timetableButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="50dp"
+        android:layout_marginStart="60dp"
         android:layout_marginTop="64dp"
         android:onClick="toWeb"
         android:text="TimeTable"
@@ -45,22 +48,25 @@
         android:id="@+id/canvasButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="92dp"
         android:layout_marginTop="64dp"
-        android:layout_marginEnd="50dp"
+        android:layout_marginEnd="49dp"
         android:onClick="toWeb"
         android:text="Canvas"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/timetableButton"
         app:layout_constraintTop_toBottomOf="@+id/emailButton" />
 
     <TextView
         android:id="@+id/titleUC"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="76dp"
-        android:layout_marginEnd="76dp"
-        android:text="Press buttons to begin"
+        android:layout_marginTop="64dp"
+        android:layout_marginEnd="288dp"
+        android:text="Press Buttons to begin"
         android:textAlignment="center"
-        android:textSize="25dp"
+        android:textSize="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -68,10 +74,10 @@
         android:id="@+id/examButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="50dp"
+        android:layout_marginStart="100dp"
         android:layout_marginTop="64dp"
         android:text="Exam TT"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/timetableButton" />
+        app:layout_constraintStart_toEndOf="@+id/emailButton"
+        app:layout_constraintTop_toBottomOf="@+id/titleUC" />
 
 </android.support.constraint.ConstraintLayout>
