@@ -33,6 +33,7 @@ public class MainActivity extends AppCompatActivity {
         Button mapButton = (Button) findViewById(R.id.mapButton);
         Button timeTableButton = (Button) findViewById(R.id.timetableButton);
         Button examButton = (Button) findViewById(R.id.examButton);
+        Button homeButton = (Button) findViewById(R.id.homeButton);
 
         // Add to Arraylist
         buttonList.add(canButton);
@@ -40,6 +41,7 @@ public class MainActivity extends AppCompatActivity {
         buttonList.add(mapButton);
         buttonList.add(timeTableButton);
         buttonList.add(examButton);
+        buttonList.add(homeButton);
 
 
     }
@@ -92,6 +94,12 @@ public class MainActivity extends AppCompatActivity {
         {
             intent.putExtra("url", "https://www.canberra.edu.au/myuc-u/exams-and-results/exam-timetable");
             intent.putExtra("title", "Exam Timetable");
+        }
+
+        if(view.getId() == buttonList.get(5).getId())
+        {
+            intent.putExtra("url", "https://www.canberra.edu.au/myuc-u/home");
+            intent.putExtra("title", "Home");
         }
         startActivity(intent);
     }

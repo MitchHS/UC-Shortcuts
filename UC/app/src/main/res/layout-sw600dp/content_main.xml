@@ -12,30 +12,30 @@
         android:id="@+id/mapButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="50dp"
-        android:layout_marginTop="108dp"
+        android:layout_marginStart="250dp"
+        android:layout_marginTop="152dp"
         android:onClick="toMap"
         android:text="Map"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/emailButton"
         app:layout_constraintTop_toBottomOf="@+id/titleUC" />
 
     <Button
         android:id="@+id/emailButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="108dp"
-        android:layout_marginEnd="50dp"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="152dp"
         android:onClick="toWeb"
         android:text="Email"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/titleUC" />
 
     <Button
         android:id="@+id/timetableButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="50dp"
-        android:layout_marginTop="64dp"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="92dp"
         android:onClick="toWeb"
         android:text="TimeTable"
         app:layout_constraintStart_toStartOf="parent"
@@ -45,21 +45,21 @@
         android:id="@+id/canvasButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="64dp"
-        android:layout_marginEnd="50dp"
+        android:layout_marginStart="234dp"
+        android:layout_marginTop="92dp"
         android:onClick="toWeb"
         android:text="Canvas"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/emailButton" />
+        app:layout_constraintStart_toEndOf="@+id/timetableButton"
+        app:layout_constraintTop_toBottomOf="@+id/mapButton" />
 
     <TextView
         android:id="@+id/titleUC"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="76dp"
-        android:text="Press buttons to begin"
+        android:layout_marginTop="96dp"
+        android:text="Press Buttons to begin"
         android:textAlignment="center"
-        android:textSize="25dp"
+        android:textSize="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -67,22 +67,22 @@
         android:id="@+id/examButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="50dp"
-        android:layout_marginTop="64dp"
+        android:layout_marginTop="152dp"
+        android:layout_marginEnd="100dp"
         android:onClick="toWeb"
         android:text="Exam TT"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/timetableButton" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/titleUC" />
 
     <Button
         android:id="@+id/homeButton"
         android:layout_width="wrap_content"
-        android:layout_height="0dp"
-        android:layout_marginTop="64dp"
-        android:layout_marginEnd="50dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="92dp"
+        android:layout_marginEnd="100dp"
         android:onClick="toWeb"
         android:text="UC Home"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/canvasButton" />
+        app:layout_constraintTop_toBottomOf="@+id/examButton" />
 
 </android.support.constraint.ConstraintLayout>
