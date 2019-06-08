@@ -12,30 +12,30 @@
         android:id="@+id/mapButton"
         android:layout_width="wrap_content"
         android:layout_height="0dp"
-        android:layout_marginStart="65dp"
-        android:layout_marginTop="272dp"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="100dp"
         android:onClick="toMap"
         android:text="Map"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/titleUC" />
+        app:layout_constraintTop_toBottomOf="@+id/emailButton" />
 
     <Button
         android:id="@+id/emailButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="272dp"
-        android:layout_marginEnd="81dp"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="112dp"
         android:onClick="toWeb"
         android:text="Email"
-        app:layout_constraintEnd_toStartOf="@+id/examButton"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/titleUC" />
 
     <Button
         android:id="@+id/timetableButton"
         android:layout_width="wrap_content"
         android:layout_height="0dp"
-        android:layout_marginStart="65dp"
-        android:layout_marginTop="92dp"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="100dp"
         android:onClick="toWeb"
         android:text="TimeTable"
         app:layout_constraintStart_toStartOf="parent"
@@ -45,12 +45,12 @@
         android:id="@+id/canvasButton"
         android:layout_width="wrap_content"
         android:layout_height="0dp"
-        android:layout_marginStart="68dp"
-        android:layout_marginTop="92dp"
+        android:layout_marginTop="112dp"
+        android:layout_marginEnd="44dp"
         android:onClick="toWeb"
         android:text="Canvas"
-        app:layout_constraintStart_toEndOf="@+id/timetableButton"
-        app:layout_constraintTop_toBottomOf="@+id/emailButton" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/titleUC" />
 
     <TextView
         android:id="@+id/titleUC"
@@ -67,19 +67,19 @@
         android:id="@+id/examButton"
         android:layout_width="wrap_content"
         android:layout_height="0dp"
-        android:layout_marginTop="272dp"
-        android:layout_marginEnd="107dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginEnd="44dp"
         android:onClick="toWeb"
         android:text="Exam TT"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/titleUC" />
+        app:layout_constraintTop_toBottomOf="@+id/canvasButton" />
 
     <Button
         android:id="@+id/homeButton"
         android:layout_width="wrap_content"
         android:layout_height="0dp"
-        android:layout_marginTop="92dp"
-        android:layout_marginEnd="104dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginEnd="44dp"
         android:onClick="toWeb"
         android:text="UC Home"
         app:layout_constraintEnd_toEndOf="parent"
