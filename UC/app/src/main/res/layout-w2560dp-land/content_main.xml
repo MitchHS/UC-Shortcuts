@@ -11,11 +11,13 @@
     <Button
         android:id="@+id/mapButton"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="50dp"
-        android:layout_marginTop="108dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="120dp"
+        android:layout_marginTop="84dp"
+        android:layout_marginEnd="112dp"
         android:onClick="toMap"
         android:text="Map"
+        app:layout_constraintEnd_toStartOf="@+id/emailButton"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/titleUC" />
 
@@ -23,66 +25,68 @@
         android:id="@+id/emailButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="108dp"
-        android:layout_marginEnd="50dp"
+        android:layout_marginTop="84dp"
+        android:layout_marginEnd="112dp"
         android:onClick="toWeb"
         android:text="Email"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/examButton"
         app:layout_constraintTop_toBottomOf="@+id/titleUC" />
 
     <Button
         android:id="@+id/timetableButton"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="50dp"
-        android:layout_marginTop="64dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="120dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="100dp"
         android:onClick="toWeb"
         android:text="TimeTable"
+        app:layout_constraintEnd_toStartOf="@+id/canvasButton"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/mapButton" />
 
     <Button
         android:id="@+id/canvasButton"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="64dp"
-        android:layout_marginEnd="50dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="112dp"
         android:onClick="toWeb"
         android:text="Canvas"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/homeButton"
         app:layout_constraintTop_toBottomOf="@+id/emailButton" />
 
     <TextView
         android:id="@+id/titleUC"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="76dp"
-        android:text="Press buttons to begin"
+        android:layout_marginTop="32dp"
+        android:text="Press Buttons to begin"
         android:textAlignment="center"
-        android:textSize="25dp"
+        android:textSize="30dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/examButton"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="50dp"
-        android:layout_marginTop="64dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="84dp"
+        android:layout_marginEnd="120dp"
         android:onClick="toWeb"
         android:text="Exam TT"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/timetableButton" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/titleUC" />
 
     <Button
         android:id="@+id/homeButton"
         android:layout_width="wrap_content"
         android:layout_height="0dp"
-        android:layout_marginTop="64dp"
-        android:layout_marginEnd="50dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="120dp"
         android:onClick="toWeb"
         android:text="UC Home"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/canvasButton" />
+        app:layout_constraintTop_toBottomOf="@+id/examButton" />
 
 </android.support.constraint.ConstraintLayout>

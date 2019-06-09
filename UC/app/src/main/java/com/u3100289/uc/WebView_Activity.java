@@ -15,7 +15,6 @@ import android.webkit.WebViewClient;
 
 public class WebView_Activity extends AppCompatActivity {
     WebView wv;
-    //String url = "https://www.canberra.edu.au/__data/assets/image/0009/1613709/UCEM0063_UCMap_Web_190219_General.png";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
