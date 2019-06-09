@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">UC</string>
+    <string name="app_name">Quick UC</string>
     <string name="action_settings">Settings</string>
     <string name="title_activity_time_table_">TimeTable_Activity</string>
     <string name="title_activity_email_">Email_Activity</string>
