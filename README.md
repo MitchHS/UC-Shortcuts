@@ -9,4 +9,6 @@
 5. UC Exam TimeTable
 6. UC Home 
 
-Should be support by most mobile resolutions and a majority of tablets. Work in progress. 
+Should be support by most mobile resolutions and a majority of tablets. Work in progress.
+
+Icon author: https://www.iconfinder.com/freeicons.io
