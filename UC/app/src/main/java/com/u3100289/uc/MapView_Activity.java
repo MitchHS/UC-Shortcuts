@@ -27,12 +27,7 @@ public class MapView_Activity extends AppCompatActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
         setTitle("Campus map");
-
-
-
     }
-
-
 
     // this redirects all touch events in the activity to the gesture detector
     @Override
