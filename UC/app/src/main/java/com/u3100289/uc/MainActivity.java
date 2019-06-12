@@ -42,32 +42,7 @@ public class MainActivity extends AppCompatActivity {
         buttonList.add(timeTableButton);
         buttonList.add(examButton);
         buttonList.add(homeButton);
-
-
     }
-
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_main, menu);
-        return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
-        }
-
-        return super.onOptionsItemSelected(item);
-    }
-
 
     public void toWeb(View view) {
         Intent intent = new Intent(this, WebView_Activity.class);
@@ -98,8 +73,8 @@ public class MainActivity extends AppCompatActivity {
 
         if(view.getId() == buttonList.get(5).getId())
         {
-            intent.putExtra("url", "https://www.canberra.edu.au/myuc-u/home");
-            intent.putExtra("title", "Home");
+           intent.putExtra("url", "https://www.canberra.edu.au/myuc-u");
+           intent.putExtra("title", "Home");
         }
         startActivity(intent);
     }
@@ -110,6 +85,12 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
-
-
+    // Open External
+    public void openWebPage(String url) {
+        Uri webpage = Uri.parse(url);
+        Intent intent = new Intent(Intent.ACTION_VIEW, webpage);
+        if (intent.resolveActivity(getPackageManager()) != null) {
+            startActivity(intent);
+        }
+    }
 }
