@@ -2,6 +2,8 @@ package com.u3100289.uc;
 
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
+import android.content.res.Resources;
+import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
@@ -12,8 +14,11 @@ import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Button;
+import android.widget.ImageView;
+import java.util.concurrent.ThreadLocalRandom;
 
 import java.util.ArrayList;
+import java.util.Random;
 
 public class MainActivity extends AppCompatActivity {
     // ArrayList for Buttons
@@ -26,6 +31,20 @@ public class MainActivity extends AppCompatActivity {
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_SENSOR);
+        ImageView imageView = findViewById(R.id.imageView);
+
+
+        Random ran = new Random();
+        int randomInt = ran.nextInt(8);
+        if(randomInt == 0){randomInt = randomInt+=ran.nextInt(7);}
+
+        String tmp = "a" + randomInt;
+        System.out.println("FILE" + tmp);
+
+        Resources res = getResources();
+        int resourceId = res.getIdentifier(
+               tmp , "drawable", getPackageName() );
+        imageView.setImageResource(resourceId);
 
         // Buttons
         Button canButton = (Button) findViewById(R.id.canvasButton);
@@ -34,6 +53,8 @@ public class MainActivity extends AppCompatActivity {
         Button timeTableButton = (Button) findViewById(R.id.timetableButton);
         Button examButton = (Button) findViewById(R.id.examButton);
         Button homeButton = (Button) findViewById(R.id.homeButton);
+
+
 
         // Add to Arraylist
         buttonList.add(canButton);
@@ -61,19 +82,19 @@ public class MainActivity extends AppCompatActivity {
 
         if(view.getId() == buttonList.get(3).getId())
         {
-            intent.putExtra("url", "https://www.canberra.edu.au/myuc-u/enrolments-and-timetables/uc-class-allocation-system");
+            intent.putExtra("url", "https://www.canberra.edu.au/content/myuc/home/course/timetable.html");
             intent.putExtra("title", "Timetable");
         }
 
         if(view.getId() == buttonList.get(4).getId())
         {
-            intent.putExtra("url", "https://www.canberra.edu.au/myuc-u/exams-and-results/exam-timetable");
+            intent.putExtra("url", "https://www.canberra.edu.au/content/myuc/home/course/exams/exam-information.html");
             intent.putExtra("title", "Exam Timetable");
         }
 
         if(view.getId() == buttonList.get(5).getId())
         {
-           intent.putExtra("url", "https://www.canberra.edu.au/myuc-u");
+           intent.putExtra("url", "https://www.canberra.edu.au/content/myuc/home.html");
            intent.putExtra("title", "Home");
         }
         startActivity(intent);
